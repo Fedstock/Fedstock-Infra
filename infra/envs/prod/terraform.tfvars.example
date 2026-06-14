@@ -1,0 +1,55 @@
+project    = "fl-mlops"
+env        = "prod"
+aws_region = "ap-northeast-2"
+aws_account_id = "123456789012"
+aws_profile    = "default"
+
+availability_zones   = ["ap-northeast-2a", "ap-northeast-2c"]
+vpc_cidr             = "10.20.0.0/16"
+public_subnet_cidrs  = ["10.20.0.0/24", "10.20.1.0/24"]
+private_subnet_cidrs = ["10.20.10.0/24", "10.20.11.0/24"]
+
+allowed_alb_ingress_cidr_blocks = ["0.0.0.0/0"]
+domain_name                     = "api.example.com"
+existing_certificate_arn        = "arn:aws:acm:ap-northeast-2:123456789012:certificate/<certificate-id>"
+artifact_bucket_name            = null
+
+backend_image_tag    = "v1"
+ai_backend_image_tag = "v1"
+
+backend_container_port    = 8080
+ai_backend_container_port = 8000
+
+postgres_db_name  = "app"
+postgres_username = "app"
+postgres_password = null
+manage_rds_master_user_password = true
+
+rds_instance_class          = "db.t4g.micro"
+rds_allocated_storage       = 20
+rds_engine_version          = "16.14"
+rds_backup_retention_period = 0
+rds_multi_az                = false
+rds_deletion_protection     = true
+rds_skip_final_snapshot     = false
+
+cloudwatch_retention_in_days = 30
+
+ecs_desired_counts = {
+  backend    = 1
+  ai_backend = 0
+}
+
+ecs_task_cpu = {
+  backend    = 512
+  ai_backend = 1024
+}
+
+ecs_task_memory = {
+  backend    = 1024
+  ai_backend = 2048
+}
+
+extra_tags = {
+  Owner = "fedstock"
+}

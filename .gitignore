@@ -1,0 +1,52 @@
+# Local planning notes
+/codex-notes/*.md
+/notes/*.md
+/todo.md
+
+# Local documentation drafts
+/docs/
+/architecture_notes.md
+/explain.md
+
+# Terraform local files
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfvars
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Logs and local runtime files
+*.log
+logs/
+tmp/
+temp/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Generated design exports
+/figma-infra-architecture.html
+/figma-infra-architecture.svg
