@@ -11,7 +11,6 @@ Fedstock 서비스 IaC repo입니다.
 | Category | Content |
 | --- | --- |
 | 담당자 | 안재현 AWS cloud engineering 100% |
-
 | IaC | Terraform |
 | Cloud | AWS |
 | Runtime | ECS Fargate |
